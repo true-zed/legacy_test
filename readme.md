@@ -1,0 +1,1 @@
+Make tests for all classes. Refactor modules as you wish
