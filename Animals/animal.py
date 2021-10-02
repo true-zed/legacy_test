@@ -20,7 +20,7 @@ class Animal:
                                               self.__get_std_text_templates())
 
     def say(self):
-        print(f"Helclo, I'm {self.__class__.__name__} and "
+        print(f"Hello, I'm {self.__class__.__name__} and "
               f"my name is {self.name}.")
 
     def run(self):
