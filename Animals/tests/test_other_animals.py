@@ -6,46 +6,47 @@ Here are tests for checking the predefined values of the Animal child classes.
 
 import pytest
 
-from Animals import Cat, Dog, Fish, FlyingFish, Tiger
+from Animals import Cat, Dog, Fish, FlyingFish, Tiger, Duck
 
 test_cat = Cat()
 test_dog = Dog()
 test_fish = Fish()
 test_flying_fish = FlyingFish()
 test_tiger = Tiger()
+test_duck = Duck()
 
 name_test = [
     (test_cat, 'Cat'), (test_dog, 'Dog'),
     (test_fish, 'Fish'), (test_tiger, 'Tiger'),
-    (test_flying_fish, 'FlyingFish')]
+    (test_flying_fish, 'FlyingFish'), (test_duck, 'Duck')]
 
 energy_test = [
     (test_cat, 100), (test_dog, 100),
     (test_fish, 100), (test_tiger, 200),
-    (test_flying_fish, 100)]
+    (test_flying_fish, 100), (test_duck, 100)]
 
 actions_test = [
     (test_cat, 'run', True), (test_dog, 'run', True),
     (test_fish, 'run', False), (test_flying_fish, 'run', False),
-    (test_tiger, 'run', True),
+    (test_tiger, 'run', True), (test_duck, 'run', False),
     (test_cat, 'swim', False), (test_dog, 'swim', True),
     (test_fish, 'swim', True), (test_flying_fish, 'swim', True),
-    (test_tiger, 'swim', True),
+    (test_tiger, 'swim', True), (test_duck, 'swim', True),
     (test_cat, 'fly', False), (test_dog, 'fly', False),
     (test_fish, 'fly', False), (test_flying_fish, 'fly', True),
-    (test_tiger, 'fly', False)
+    (test_tiger, 'fly', False), (test_duck, 'fly', True)
 ]
 
 actions_energy_test = [
     (test_cat, 'run', 5), (test_dog, 'run', 10),
     (test_fish, 'run', 0), (test_flying_fish, 'run', 0),
-    (test_tiger, 'run', 20),
+    (test_tiger, 'run', 20), (test_duck, 'run', 0),
     (test_cat, 'swim', 0), (test_dog, 'swim', 30),
     (test_fish, 'swim', 5), (test_flying_fish, 'swim', 5),
-    (test_tiger, 'swim', 40),
+    (test_tiger, 'swim', 40), (test_duck, 'swim', 10),
     (test_cat, 'fly', 0), (test_dog, 'fly', 0),
     (test_fish, 'fly', 0), (test_flying_fish, 'fly', 20),
-    (test_tiger, 'fly', 0)
+    (test_tiger, 'fly', 0), (test_duck, 'fly', 30),
 ]
 
 
