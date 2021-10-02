@@ -8,6 +8,7 @@ import pytest
 
 from Animals import Cat, Dog, Fish, FlyingFish, Tiger, Duck
 
+
 test_cat = Cat()
 test_dog = Dog()
 test_fish = Fish()
@@ -81,16 +82,13 @@ def test_animals_actions(animal, action, expected):
     :param action: Animals actions like 'say', 'run'.
     :param expected: A pool of expected (predefined) actions.
     """
-    assert animal._do_action(  # pylint: disable=W0212
-        action=action) == expected
+    assert animal._do_action(action=action) == expected  # pylint: disable=W0212
 
 
-@pytest.mark.parametrize(('animal', 'action', 'expected'),
-                         actions_energy_test)
+@pytest.mark.parametrize(('animal', 'action', 'expected'), actions_energy_test)
 def test_animals_actions_energy_consumption(animal, action, expected):
     """
-    Basic test to confirm that the action consumption
-    is set (predefined) correctly.
+    Basic test to confirm that the action consumption is set (predefined) correctly.
 
     :param animal: Class of testing animal.
     :param action: Animals actions like 'say', 'run'.

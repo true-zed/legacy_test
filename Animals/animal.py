@@ -12,16 +12,11 @@ class Animal:
         self.name = init_parameters.get('name') or name
         self.energy = init_parameters.get('energy') or energy
 
-        self.energy_consumption = init_parameters.get('energy_consumption',
-                                                      energy_consumption or {})
-
-        self._templates = init_parameters.get('text_templates',
-                                              text_templates or
-                                              self.__get_std_text_templates())
+        self.energy_consumption = init_parameters.get('energy_consumption', energy_consumption or {})
+        self._templates = init_parameters.get('text_templates', text_templates or self.__get_std_text_templates())
 
     def say(self):
-        print(f"Hello, I'm {self.__class__.__name__} and "
-              f"my name is {self.name}.")
+        print(f"Hello, I'm {self.__class__.__name__} and my name is {self.name}.")
 
     def run(self):
         self._do_action(action='run', print_text=True)
@@ -38,8 +33,7 @@ class Animal:
     def _do_action(self, action: str, print_text=False) -> bool:
         if action not in self._templates.keys():
             if print_text:
-                print(f"My name is {self.name} and "
-                      f"I don't know what is \"{action}\".")
+                print(f"My name is {self.name} and I don't know what is \"{action}\".")
             return False
 
         energy_consumption = self.energy_consumption.get(action, 0)
