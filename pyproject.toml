@@ -16,6 +16,9 @@ pytest-mypy = "^0.8.1"
 pytest-pylint = "^0.18.0"
 tox = "^3.24.4"
 
+[tool.pylint.'FORMAT']
+max-line-length = 120
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
