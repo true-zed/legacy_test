@@ -9,7 +9,7 @@ from contextlib import redirect_stdout
 import io
 import pytest
 
-from Animals import Animal
+from animals.animal import Animal
 
 
 STD_ANIMAL_NAME = 'standard animal'
@@ -89,7 +89,7 @@ def test_animal_speak(animal_for_test, action, expected):  # pylint: disable=W06
     Basic test for comparing the speech of an animal in action with a template.
 
     :param animal_for_test: Class of testing animal.
-    :param action: Animals actions like 'say', 'run'.
+    :param action: animals actions like 'say', 'run'.
     :param expected: Expected speech in action.
     """
     if "can't" in expected:
@@ -121,7 +121,7 @@ def test_animal_action_energy(animal_for_test, action):  # pylint: disable=W0621
     Basic test for comparing the energy consumption of an animal with a template.
 
     :param animal_for_test: Class of testing animal.
-    :param action: Animals actions like 'say', 'run'.
+    :param action: animals actions like 'say', 'run'.
     """
     start_energy = animal_for_test.get_energy()
 

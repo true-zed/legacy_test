@@ -6,7 +6,7 @@ Here are tests for checking the predefined values of the Animal child classes.
 
 import pytest
 
-from Animals import Cat, Dog, Fish, FlyingFish, Tiger, Duck
+from animals import Cat, Dog, Fish, FlyingFish, Tiger, Duck
 
 
 test_cat = Cat()
@@ -79,7 +79,7 @@ def test_animals_actions(animal, action, expected):
     Basic test to confirm that the action is set (predefined) correctly.
 
     :param animal: Class of testing animal.
-    :param action: Animals actions like 'say', 'run'.
+    :param action: animals actions like 'say', 'run'.
     :param expected: A pool of expected (predefined) actions.
     """
     assert animal._do_action(action=action) == expected  # pylint: disable=W0212
@@ -91,7 +91,7 @@ def test_animals_actions_energy_consumption(animal, action, expected):
     Basic test to confirm that the action consumption is set (predefined) correctly.
 
     :param animal: Class of testing animal.
-    :param action: Animals actions like 'say', 'run'.
+    :param action: animals actions like 'say', 'run'.
     :param expected: Expected (predefined) energy consumption.
     """
     start_energy = animal.get_energy()
