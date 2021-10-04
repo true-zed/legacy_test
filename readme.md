@@ -1,1 +1,2 @@
-Make tests for all classes. Refactor modules as you wish
+### Test command (enter into terminal):
+>tox 
